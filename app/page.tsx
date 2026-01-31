@@ -129,7 +129,7 @@ export default function HarmonicBakery() {
 
     const isTimeValid = () => {
         if (!pickupTime) return false;
-        return (new Date(pickupTime) - new Date()) / 36e5 >= 24;
+        return (new Date(pickupTime).getTime() - new Date().getTime()) / 36e5 >= 24;
     };
 
     /* ========================= */
